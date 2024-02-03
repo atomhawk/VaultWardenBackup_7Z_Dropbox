@@ -7,7 +7,7 @@ BACKUP_FILE="backup_$(date "+%F-%H%M%S")"
 sqlite3 /data/db.sqlite3 ".backup '/tmp/db.sqlite3'"
 
 # tar up backup and encrypt with openssl and encryption key
- 7z a -t7z -m0=lzma2 -mx=9 -mfb=64 -md=32m -ms=on -mhe=on -p $Z_PASSWORD /tmp/$BACKUP_FILE.7z /tmp/db.sqlite3 /data/attachments /data/config.json
+ 7z a -t7z -m0=lzma2 -mx=9 -mfb=64 -md=32m -ms=on -mhe=on -p$Z_PASSWORD /tmp/$BACKUP_FILE.7z /tmp/db.sqlite3 /data/attachments /data/config.json
 
 # copy 7z to LOCAL_BACKUP_DIR
 cp /tmp/${BACKUP_FILE}.7z /${LOCAL_BACKUP_DIR}/${BACKUP_FILE}.7z
