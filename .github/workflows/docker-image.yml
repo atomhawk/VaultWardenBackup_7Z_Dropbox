@@ -29,4 +29,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/VaultWarden_7z_Dropbox:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/vaultwarden_7z_dropbox:latest
